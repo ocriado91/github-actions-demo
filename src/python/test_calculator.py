@@ -1,12 +1,12 @@
 import pytest
-import calculator
+from calculator import Calculator
 
 def test_add():
-    calculator = calculator.Calculator(10,4)
+    calculator = Calculator(10,4)
     assert calculator.add() == 14
 
 def test_substract():
-    calculator = calculator.Calculator(10,4)
+    calculator = Calculator(10,4)
     assert calculator.substract() == 6
 
 def main():
