@@ -1,5 +1,5 @@
 import pytest
-import calculator
+from calculator import Calculator
 
 def test_add():
     calculator = Calculator(10,4)
