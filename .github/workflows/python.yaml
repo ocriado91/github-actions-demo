@@ -20,7 +20,7 @@ jobs:
         - name: Get current working directory
           run: |
             export PYTHONPATH=${{ env.working-directory }}
-            echo $PYTHONPATH
+            ls -lrt $PYTHONPATH
         - name: Install dependencies
           run: |
             python -m pip install --upgrade pip
