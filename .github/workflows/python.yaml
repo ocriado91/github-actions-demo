@@ -17,10 +17,6 @@ jobs:
           uses: actions/setup-python@v2
           with:
             python-version: ${{ matrix.python-version }}
-        - name: Get current working directory
-          run: |
-            export PYTHONPATH=${{ env.working-directory }}
-            ls -lrt $PYTHONPATH
         - name: Install dependencies
           run: |
             python -m pip install --upgrade pip
@@ -34,4 +30,5 @@ jobs:
             flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         - name: Test with pytest
           run: |
-            pytest src/python/
+            export PYTHONPATH=${{ env.working-directory }}
+            pytest
