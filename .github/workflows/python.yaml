@@ -30,3 +30,4 @@ jobs:
           run: |
             echo "::set-env name=PYTHONPATH::/home/runner/work/github-actions-demo"
             ls -lrt $PYTHONPATH
+            pytest src/python/
