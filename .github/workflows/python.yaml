@@ -29,5 +29,4 @@ jobs:
         - name: Test with pytest
           run: |
             echo "::set-env name=PYTHONPATH::/home/runner/work/github-actions-demo"
-            ls -R
-            pytest
+            ls -lrt $PYTHONPATH
