@@ -1,8 +1,4 @@
 import pytest
-import sys
-
-sys.path.append('../src')
-
 from calculator import Calculator
 
 def test_add():
