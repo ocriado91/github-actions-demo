@@ -1,4 +1,8 @@
 import pytest
+import sys
+
+sys.path.append('..')
+
 from calculator import Calculator
 
 def test_add():
