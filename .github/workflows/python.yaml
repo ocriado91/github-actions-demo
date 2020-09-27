@@ -6,7 +6,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
         env:
-            working-directory: ./src
+            working-directory: .
         strategy:
             matrix:
                 python-version: [3.5, 3.7, 3.8]
@@ -19,7 +19,7 @@ jobs:
             python-version: ${{ matrix.python-version }}
         - name: Get current working directory
           run: |
-            export PYTHONPATH=`${{ env.working-directory }}`
+            export PYTHONPATH=${{ env.working-directory }}
             echo $PYTHONPATH
         - name: Install dependencies
           run: |
